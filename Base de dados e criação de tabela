@@ -5,5 +5,6 @@ father_edu INT,
 patner INT,
 grade INT,
 salary INT,
-study_hrs INT
+study_hrs INT,
+prep_exam INT
 );
