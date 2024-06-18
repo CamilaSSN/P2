@@ -1,0 +1,21 @@
+CREATE FUNCTION fn_salary_study() RETURNS INT
+LANGUAGE plpgsql
+AS $$
+DECLARE
+resultado INT;
+BEGIN
+    SELECT COUNT (*)
+    FROM tb_aluno
+    INTO resultado
+    WHERE prep_exam = 2 AND salary = 5;
+    RETURN resultado;
+END;
+$$
+DO $$
+DECLARE
+    resultado INT;
+BEGIN
+    resultado := fn_salary_study();
+    RAISE NOTICE '%', resultado;
+END;
+$$
