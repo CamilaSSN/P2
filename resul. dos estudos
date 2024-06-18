@@ -1,0 +1,22 @@
+CREATE OR REPLACE PROCEDURE sp_qt_aprov_partner(
+    OUT aprovado INT
+    )
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    SELECT COUNT (cod_id)
+    INTO aprovado
+    FROM tb_aluno
+    WHERE partner = 2 and  grade >= 5;
+ 
+END;
+$$
+ 
+DO $$
+DECLARE
+    aprovado INT;
+BEGIN
+    CALL sp_qt_aprov_partner(aprovado);
+    RAISE NOTICE 'A quantidade de aprovados que estudam sozinho é %', aprovado;
+END;
+$$
