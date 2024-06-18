@@ -1,0 +1,9 @@
+CREATE TABLE tb_aluno (
+cod_id SERIAL PRIMARY KEY,
+mother_edu INT,
+father_edu INT,
+patner INT,
+grade INT,
+salary INT,
+study_hrs INT
+);
