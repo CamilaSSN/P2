@@ -1,0 +1,16 @@
+CREATE OR REPLACE PROCEDURE sp_aprovados_pais_phd(
+    OUT parents_edu INT)
+    LANGUAGE plpgsql
+AS $$
+DECLARE
+    parents_edu INT;
+BEGIN
+    SELECT COUNT (cod_id)
+    INTO parents_edu
+    FROM tb_aluno
+    WHERE mother_edu = 6
+    AND father_edu = 6
+    AND grade >= 5;
+   
+END;
+$$ 
