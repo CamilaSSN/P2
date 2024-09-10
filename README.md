@@ -1,11 +1,1 @@
 Camila Soares da Silva Neres
-RA: 2041382311015
-
-TATIANA DE ARAUJO BARONI	
-RA 2041382311006
-
-Tiago Gomes de Barros
-RA: 2041382311022
-
-Guilherme Gabriel Paes Faria
-2041382311010
